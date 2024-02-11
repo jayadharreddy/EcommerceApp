@@ -52,6 +52,12 @@ spring-security-test
 spring-boot-starter-validation
 hibernate-validator
 
+For JWT dependencies
+
+jjwt-api
+jjwt-impl
+jwt-jackson
+
 
 2.Create DB ecom_project
 
@@ -59,3 +65,12 @@ hibernate-validator
 
 Creating JWT Util and JWT request Filter
 
+git
+git pull origin main
+
+
+Create Login, sign-up component and add the routing in routing.ts
+
+Created JWTrequestFilter.java
+UserRepository.java,  UserDetailsServiceImpl.java
+JwtUtil.java, 
