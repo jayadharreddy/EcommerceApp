@@ -30,9 +30,9 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 public class AuthController {
-	private static final String HEADER_STRING = "Bearer ";
+	public static final String HEADER_STRING = "Bearer ";
 
-	private static final String TOKEN_PREFIX = "Authorization";
+	public static final String TOKEN_PREFIX = "Authorization";
 
 	private final AuthenticationManager authenticationManager;
 	
@@ -57,15 +57,20 @@ public class AuthController {
 		final UserDetails userDetails=userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
 		Optional<User> optionalUser= userRepository.findFirstByEmail(userDetails.getUsername());
 		final String jwt= jwtUtil.generateToken(userDetails.getUsername());
-		
 		if(optionalUser.isPresent()) {
 			response.getWriter().write(new JSONObject()
 					.put("userId", optionalUser.get().getId())
 					.put("role", optionalUser.get().getRole())
 					.toString());
+		
+		
+		response.addHeader("Access-Control-Expose-Headers", "Authorization");
+		response.addHeader("Access-Control-Allow-Headers", "Authorization, X-PINGOTHER, Origin, "+
+				"X-Requested-With, Content-Type, Accept, X-Custom-header");
+		response.addHeader(HEADER_STRING, TOKEN_PREFIX + jwt);
+		response.addHeader("authorization", jwt);
 		}
 		
-		response.addHeader(HEADER_STRING, TOKEN_PREFIX);
 	}
 	
 	@PostMapping("/sign-up")
