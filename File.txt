@@ -34,6 +34,19 @@ User Profile Management: Easily update user profiles and change passwords for en
 Order Tracking: Conveniently track your orders using tracking IDs, even if you're not logged in.
 
 
+Git
+show modified files: 
+git show --stat
+
+add modified files to commit
+git add .
+
+commit 
+git commit -m "<message>"
+
+push 
+git push
+
 1.Goto Spring.io
 create ecom project and import to eclipse/STS/Intellij
 <artifactId> ecom 
@@ -74,3 +87,21 @@ Create Login, sign-up component and add the routing in routing.ts
 Created JWTrequestFilter.java
 UserRepository.java,  UserDetailsServiceImpl.java
 JwtUtil.java, 
+
+Creating Login Page API call and storage service Angular
+
+create UserStorage ts file
+ng g s UserStorage
+
+In UserStorageService create saveToken() method
+ in this method we remove token in local storage if any existing
+ 
+In UserStorageService create saveUser() method
+ in this method we remove user in local storage if any existing\
+ 
+LoginPage:
+change login page in vsCode
+
+created login Page and set token and user is session storage
+
+
