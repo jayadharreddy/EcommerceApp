@@ -2,8 +2,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { UserStorageService } from '../storage/user-storage.service';
+import { environment } from 'src/environment/environment';
 
-const BASIC_URL = "http://localhost:8084/";
+const BASIC_URL = environment.url;
+//"http://localhost:8084/";
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +25,6 @@ export class AuthService {
     console.log("body", body)
     return this.http.post(BASIC_URL + 'authenticate', body, { headers, observe: 'response' }).pipe(
       map((res) => {
-        debugger;
         const token = res.headers.get('authorization')?.substring(7);
         const user = res.body;
         if (token || user) {
