@@ -124,4 +124,11 @@ In WebSecurityConfiguration
  .requestMatchers("/api/**")
  .permitAll()
 
+31-03-2024
+
+created getCategory api 
+
+NextStep:
+Creating post Product API, Get All Products API with DTO
+
 
