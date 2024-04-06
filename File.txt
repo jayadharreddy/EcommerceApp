@@ -37,6 +37,10 @@ Admin Credentials:
 mail: admin@test.com
 pwd: admin
 
+User Credentials
+user@test.com
+user
+
 Git
 show modified files: 
 git show --stat
@@ -129,6 +133,13 @@ In WebSecurityConfiguration
 created getCategory api 
 
 NextStep:
+06-04-2024
 Creating post Product API, Get All Products API with DTO
 
+Create ProductDTO and use it in Product APIs
 
+created AdminProductContoller, ProductDto, Product, 
+ProductRepository, AdminProductService, AdminProductServiceImpl
+
+NextStep:
+creating post ProductPage, with Image preview & Category Section from dropdown 
