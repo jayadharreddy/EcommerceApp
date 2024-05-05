@@ -52,7 +52,8 @@ public class Product {
 		productDto.setPrice(price);
 		productDto.setDescription(description);
 		productDto.setByteImg(img);
-		productDto.setCategotyId(category.getId());
+		System.out.println("category Id: "+category.getId());
+		productDto.setCategoryId(category.getId());
 		
 		return productDto;
 	}

@@ -26,13 +26,14 @@ public class AdminCategoryController {
 	
 	@PostMapping("category")
 	public ResponseEntity<Category> createCategory(@RequestBody CategoryDto categorydto){
+		System.out.println("add Category");
 		Category category= categoryService.createcategory(categorydto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(category);
 	}
 	
 	@GetMapping("")
 	public ResponseEntity<List<Category>> getAllCaregories()
-	{
+	{	System.out.println("Get All Categories");
 		return ResponseEntity.ok(categoryService.getAllCategories());
 	}
 }
