@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class ProductDto {
 	
-private int id;
+	private int id;
 	
 	private String name;
 	
@@ -17,7 +17,7 @@ private int id;
 	
 	private byte[] byteImg;
 	
-	private Long categotyId; //maps product with category
+	private Long categoryId; //maps product with category
 	
 	private MultipartFile img;
 }

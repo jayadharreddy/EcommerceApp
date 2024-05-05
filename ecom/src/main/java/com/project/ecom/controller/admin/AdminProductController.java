@@ -25,9 +25,10 @@ public class AdminProductController {
 	
 	@PostMapping("/product")
 	public ResponseEntity<ProductDto> addProduct(@ModelAttribute ProductDto productDto) throws IOException{
+		System.out.println("Post Product"+ productDto.getCategoryId());
 		ProductDto productDto1= adminProductService.addProduct(productDto);
 		
-		return ResponseEntity.status(HttpStatus.OK).body(productDto1);
+		return ResponseEntity.status(HttpStatus.CREATED).body(productDto1);
 	}
 	
 	@GetMapping("/products")

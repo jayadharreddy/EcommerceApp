@@ -142,4 +142,11 @@ created AdminProductContoller, ProductDto, Product,
 ProductRepository, AdminProductService, AdminProductServiceImpl
 
 NextStep:
-creating post ProductPage, with Image preview & Category Section from dropdown 
+creating post ProductPage, with Image preview & Category Selection from dropdown 
+
+product category api calls in admin service.ts 
+
+created post-product component and completed addProduct call (04-05-2024)
+Category can be selected from the list of Categories and 
+the categoryid will be common key in product and category tables
+
