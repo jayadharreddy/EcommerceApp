@@ -33,6 +33,13 @@ User Profile Management: Easily update user profiles and change passwords for en
 
 Order Tracking: Conveniently track your orders using tracking IDs, even if you're not logged in.
 
+Admin Credentials:
+mail: admin@test.com
+pwd: admin
+
+User Credentials
+user@test.com
+user
 
 Git
 show modified files: 
@@ -104,4 +111,42 @@ change login page in vsCode
 
 created login Page and set token and user is session storage
 
+Branch2: 
+Creating Role based nav-bars and storage service in angular
+
+Creating category entity, product entity & post category Rest API 
+
+Creating Post Category page & Get all categories REST API 
+
+Created PostCategory component
+
+(add ctaegory was not working)
+for temporary fix
+In WebSecurityConfiguration
+ I have removed (.authenticated) and replaced with(permitAll()) in securityFilterChain() method 
+ 
+ .requestMatchers("/api/**")
+ .permitAll()
+
+31-03-2024
+
+created getCategory api 
+
+NextStep:
+06-04-2024
+Creating post Product API, Get All Products API with DTO
+
+Create ProductDTO and use it in Product APIs
+
+created AdminProductContoller, ProductDto, Product, 
+ProductRepository, AdminProductService, AdminProductServiceImpl
+
+NextStep:
+creating post ProductPage, with Image preview & Category Selection from dropdown 
+
+product category api calls in admin service.ts 
+
+created post-product component and completed addProduct call (04-05-2024)
+Category can be selected from the list of Categories and 
+the categoryid will be common key in product and category tables
 

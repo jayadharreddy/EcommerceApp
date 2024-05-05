@@ -34,7 +34,7 @@ public class WebSecurityConfiguration {
 				.and()
 				.authorizeHttpRequests()
 				.requestMatchers("/api/**")
-				.authenticated()
+				.permitAll()
 				.and()
 				.sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
