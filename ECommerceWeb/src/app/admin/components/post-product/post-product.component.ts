@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from '../../service/admin.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -20,7 +20,7 @@ export class PostProductComponent {
     private fb: FormBuilder,
     private router: Router,
     private snackBar: MatSnackBar,
-    private adminService: AdminService
+   @Inject(AdminService) private adminService: AdminService
   ){}
 
   onFileSelected(event: any){
