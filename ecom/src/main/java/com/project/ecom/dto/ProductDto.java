@@ -19,5 +19,7 @@ public class ProductDto {
 	
 	private Long categoryId; //maps product with category
 	
+	private String categoryName;
+	
 	private MultipartFile img;
 }

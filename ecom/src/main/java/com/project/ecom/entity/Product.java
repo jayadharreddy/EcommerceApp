@@ -54,6 +54,7 @@ public class Product {
 		productDto.setByteImg(img);
 		System.out.println("category Id: "+category.getId());
 		productDto.setCategoryId(category.getId());
+		productDto.setCategoryName(category.getName());
 		
 		return productDto;
 	}

@@ -150,3 +150,23 @@ created post-product component and completed addProduct call (04-05-2024)
 Category can be selected from the list of Categories and 
 the categoryid will be common key in product and category tables
 
+05-05-24
+Branch3
+Showing all Products to Admin and creating GetAll Products by name RESTAPI
+
+dashboard component changes to display all products in dashboard after login
+
+now create an api to search products
+
+Search Products by name and FullStack Delete product api
+
+first create an endpoint call in admin service
+
+from dashboard component.ts call the search product api 
+
+create delete api and delete functionality
+
+NextStep (12-05-24):
+Building a user cart system with order and cart items entities in SpringBoot
+
+

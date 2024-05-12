@@ -10,4 +10,8 @@ public interface AdminProductService {
 	ProductDto addProduct(ProductDto productDto) throws IOException;
 	
 	List<ProductDto> getAllproducts();
+	
+	List<ProductDto> getAllproductsByName(String name);
+	
+	 boolean deleteProduct(Long id);
 }
